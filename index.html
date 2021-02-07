@@ -28,22 +28,31 @@
         moozza, offline, скачать, бесплатно, free, vkontakte, контакте, зайцев, нет">
 
     <!-- Styles -->
-    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link href="css/style.css" rel="stylesheet" id="theme-link">
 
     <!-- Scripts -->
     <script src="./js/main.js" charset="utf-8"></script>
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script type="text/javascript">
-        function generateBarCode(str)
-        {
-            var url = 'https://api.qrserver.com/v1/create-qr-code/?data=' + str + '&amp;size=50x50';
-            $('#barcode').attr('src', url);
-            document.getElementById("barcode").style.display = "block";
-        }
-    </script>
+
 
 </head>
 <body>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Наведите камеру вашего устройства</p>
+        <img id='barcode'
+             src="https://api.qrserver.com/v1/create-qr-code/?data=HelloWorld&amp;size=100x100"
+             alt=""
+             title="none"
+             width="100"
+             height="100"
+             style="display: none"/>
+    </div>
+</div>
 
     <div class="scroll_fix_wrap _page_wrap" id="page_wrap">
         <div class="landing landing_vkme">
@@ -52,6 +61,7 @@
                     <header class="page__header">
                         <img class="image_logo_media" height="120px" width="120px"
                              src="./img/ic2.png" alt="Moozza logo">
+
                         <div class="tagline">
                             <p class="title">Moozza - Музыка для ВК</p>
                         </div>
@@ -59,10 +69,9 @@
 
                     <section class="page__content">
                         <div class="picture">
-
-                            <div class="phone phone--android"></div>
-
+                            <div class="phone phone--android3"></div>
                             <div class="phone phone--android2"></div>
+                            <div class="phone phone--android"></div>
 
                         </div>
 
@@ -74,16 +83,17 @@
                         </article>
 
                         <article class="teaser teaser--features">
-                            <p>Приложение позволяет скачивать и слушать музыку без ограничений по времени и навязчивой аудиорекламы!</p>
+                            <p>Приложение позволяет скачивать и слушать музыку <span class="highlighted">без ограничений</span> по времени и навязчивой аудиорекламы!</p>
                         </article>
 
-                        <img id='barcode'
-                             src="https://api.qrserver.com/v1/create-qr-code/?data=HelloWorld&amp;size=100x100"
-                             alt=""
-                             title="none"
-                             width="100"
-                             height="100"
-                             style="display: none"/>
+                        <div class="app_info">
+                            <img width="24px" height="24px" src="./img/android-debug-bridge.svg" alt="Android version"/>
+                            <span class="app_info_text"> Android 5.0+</span>
+                        </div>
+                        <div class="app_info">
+                            <img width="24px" height="24px" src="./img/package.svg" alt="App size"/>
+                            <span class="app_info_text"> Размер приложения: 5.2 Мб</span>
+                        </div>
 
                         <footer class="links">
                             <div class="link link--ios">
@@ -104,10 +114,44 @@
                         </footer>
                     </section>
                 </main>
-            <p class="footerSpecial"> EuphoriaDev • 2021</p>
+                <div>
+                    <!--img width="24px" height="24px" src="./img/telegram.svg" alt="Telegram link"/-->
+                    <a href="https://t.me/euphoria_devs" class="footerSpecial"> EuphoriaDev • 2021</a>
+            </div>
             </div>
 
         </div>
     </div>
+<script>
+
+    // Select the button
+    const btn = document.querySelector(".image_logo");
+    const btn2 = document.querySelector(".image_logo_media");
+    // Select the stylesheet <link>
+    const theme = document.querySelector("#theme-link");
+
+    // Listen for a click on the button
+    btn.addEventListener("click", function() {
+        // If the current URL contains "ligh-theme.css"
+        if (theme.getAttribute("href") === "css/style.css") {
+            // ... then switch it to "dark-theme.css"
+            theme.href = "css/style-dark.css";
+            // Otherwise...
+        } else {
+            theme.href = "css/style.css";
+        }
+    });
+    // Listen for a click on the button
+    btn2.addEventListener("click", function() {
+        // If the current URL contains "ligh-theme.css"
+        if (theme.getAttribute("href") === "css/style.css") {
+            // ... then switch it to "dark-theme.css"
+            theme.href = "css/style-dark.css";
+            // Otherwise...
+        } else {
+            theme.href = "css/style.css";
+        }
+    });
+</script>
 </body>
 </html>

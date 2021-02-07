@@ -6,6 +6,58 @@ html {
     font: 17px/24px -apple-system, BlinkMacSystemFont, Roboto, Open Sans, Helvetica Neue, sans-serif
 }
 
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    margin-left: auto;
+    margin-right: auto;
+    -o-animation: popupIn .2s ease;
+    animation: popupIn .2s ease
+}
+
+.modal--none{
+    -o-animation: popupOut .2s ease;
+    animation: popupOut .2s ease
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 25px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 a {
     text-decoration: none;
     color: #3f8ae0
@@ -112,8 +164,15 @@ a:hover {
     }
 }
 
+.highlighted{
+    background: #3297FD;
+}
+
 .footerSpecial{
     font-family: monospace;
+    vertical-align: super;
+    /*padding-left: 10px;*/
+    color: black;
 }
 
 .title {
@@ -203,6 +262,18 @@ a:hover {
     height: 100%;
 }
 
+
+.phone--android3 {
+    top: 37px;
+    right: -233px;
+    height: 100%;
+    background: url('../img/screen0.png') no-repeat center;
+    background-size: contain;
+    -o-transform: translateY(calc(var(--koef) * 0.5 * 30px));
+    transform: translateY(calc(var(--koef) * 0.5 * 30px));
+    padding-top: 20px;
+}
+
 .phone--android2 {
     top: 22px;
     right: 8px;
@@ -235,6 +306,9 @@ a:hover {
     .phone--android2{
         height: 670px;
     }
+    .phone--android3{
+        height: 670px;
+    }
 }
 
 @media screen and (max-width: 460px) {
@@ -242,10 +316,12 @@ a:hover {
         max-width: 100%
     }
     .phone--android{
-        display: none;
         height: 670px;
     }
     .phone--android2{
+        height: 670px;
+    }
+    .phone--android3{
         height: 670px;
     }
 }
@@ -253,6 +329,10 @@ a:hover {
 @media screen and (min-width: 941px) {
     .phone {
         position: absolute
+    }
+    .phone--android3{
+        width: 269px;
+        height: 505px
     }
     .phone--android2 {
         width: 299px;
@@ -265,7 +345,9 @@ a:hover {
 }
 
 #barcode{
-    padding: 0 0 44px 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 44px 0 44px 0;
 }
 
 .teaser {
@@ -287,6 +369,7 @@ a:hover {
     font-family: monospace;
     background: url('../img/decription.svg') 0 0 no-repeat;
     background-size: 168px 24px;
+    padding-bottom: 20px;
 }
 
 .page--en .teaser--features,
@@ -582,4 +665,30 @@ a:hover {
     to {
         opacity: 1
     }
+}
+@-o-keyframes popupOut {
+    0% {
+        opacity: 1
+    }
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes popupOut {
+    0% {
+        opacity: 1
+    }
+    to {
+        opacity: 0
+    }
+}
+
+.app_info{
+    padding-bottom: 20px;
+}
+.app_info_text{
+    font-family: monospace;
+    vertical-align: super;
+    padding-left: 10px;
 }
