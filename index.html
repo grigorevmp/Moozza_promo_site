@@ -1,0 +1,113 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="" xml:lang="ru" lang="ru" style="--koef:0.5;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="./img/image2vector.svg" type="image/png">
+    <link rel="apple-touch-icon" href="./img/ic_launcher.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="./img/ic_launcher.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./img/ic_launcher.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./img/ic_launcher.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./img/ic_launcher.png">
+
+    <title>Moozza - Музыка для ВК</title>
+
+    <!-- Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+
+    <meta name="og:title" content="Moozza - Музыка для ВК">
+    <meta name="og:description"
+          content="Приложение позволяет скачивать и слушать музыку без ограничений по времени и навязчивой аудиорекламы.">
+    <meta name="og:image" content="/img/share-pic.jpg">
+
+
+    <meta name="description" content="Приложение позволяет скачивать и слушать музыку без ограничений по времени и навязчивой аудиорекламы.
+        Имеется возможность скачивать, сохранять в кэш, искать слова трека, даже если у тегах они не прописаны. И многое другое, а что бы вам было комфортно пользоваться ночью - мы добавили темную тему">
+    <meta name="keywords" content="музыка, оффлайн, загрузка, без ограничений, вк, кофе. coffee, vk, vkx,
+        moozza, offline, скачать, бесплатно, free, vkontakte, контакте, зайцев, нет">
+
+    <!-- Styles -->
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+
+    <!-- Scripts -->
+    <script src="./js/main.js" charset="utf-8"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        function generateBarCode(str)
+        {
+            var url = 'https://api.qrserver.com/v1/create-qr-code/?data=' + str + '&amp;size=50x50';
+            $('#barcode').attr('src', url);
+            document.getElementById("barcode").style.display = "block";
+        }
+    </script>
+
+</head>
+<body>
+
+    <div class="scroll_fix_wrap _page_wrap" id="page_wrap">
+        <div class="landing landing_vkme">
+            <div class="page page--ru">
+                <main class="page__main">
+                    <header class="page__header">
+                        <img class="image_logo_media" height="120px" width="120px"
+                             src="./img/ic2.png" alt="Moozza logo">
+                        <div class="tagline">
+                            <p class="title">Moozza - Музыка для ВК</p>
+                        </div>
+                    </header>
+
+                    <section class="page__content">
+                        <div class="picture">
+
+                            <div class="phone phone--android"></div>
+
+                            <div class="phone phone--android2"></div>
+
+                        </div>
+
+                        <img class="image_logo" height="120px" width="120px"
+                             src="./img/ic2.png" alt="Moozza logo">
+
+                        <article class="teaser teaser--contacts">
+                            <p class="title2">Moozza - Музыка для ВК</p>
+                        </article>
+
+                        <article class="teaser teaser--features">
+                            <p>Приложение позволяет скачивать и слушать музыку без ограничений по времени и навязчивой аудиорекламы!</p>
+                        </article>
+
+                        <img id='barcode'
+                             src="https://api.qrserver.com/v1/create-qr-code/?data=HelloWorld&amp;size=100x100"
+                             alt=""
+                             title="none"
+                             width="100"
+                             height="100"
+                             style="display: none"/>
+
+                        <footer class="links">
+                            <div class="link link--ios">
+                                <a href="http://moozza.su/dl/1.4.5.apk" class="link-store">
+                                    <img class="download" src="./img/download.svg" alt="Загрузите">
+                                </a>
+                                <a data-target="ios-link-qr" class="link-qr"
+                                   onclick="generateBarCode('http://moozza.su/dl/1.4.5.apk')"></a>
+                            </div>
+
+                            <div class="link link--android">
+                                <a href="https://play.google.com/store/apps/details?id=ru.euphoria.moozza" target="_blank" class="link-store">
+                                    <img class="googlePlay" src="./img/playstore.svg" alt="Google Play">
+                                </a>
+                                <a data-target="android-link-qr" class="link-qr"
+                                   onclick="generateBarCode('https://play.google.com/store/apps/details?id=ru.euphoria.moozza')"></a>
+                            </div>
+                        </footer>
+                    </section>
+                </main>
+            <p class="footerSpecial"> EuphoriaDev • 2021</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
