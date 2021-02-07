@@ -3,7 +3,12 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
+    background: black;
     font: 17px/24px -apple-system, BlinkMacSystemFont, Roboto, Open Sans, Helvetica Neue, sans-serif
+}
+
+img{
+    filter: invert(1);
 }
 
 a {
