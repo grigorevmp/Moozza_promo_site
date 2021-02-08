@@ -8,6 +8,16 @@ html {
 
 body { font-family: sans-serif; }
 
+.swing {
+    animation: swing ease-in-out 1s 5 alternate;
+    transform-origin: center -20px;
+}
+
+@keyframes swing {
+    0% { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
+}
+
 .scene {
     border: 0px solid #CCC;
     perspective: 600px;
@@ -153,6 +163,25 @@ a:hover {
     margin: auto
 }
 
+@media screen and (max-width: 1140px) and (min-width: 940px) {
+    .footer {
+        width: 940px;
+    }
+    .page {
+        width: 940px;
+    }
+
+}
+
+.mini_screen{
+    width: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.mini_screen:hover {
+    transform: scale(1.5);
+}
+
 .page__main {
     min-height: calc(-36%);
     margin-bottom: -136px;
@@ -173,8 +202,22 @@ a:hover {
     padding: 0 665px 0 0;
     min-height: 638px
 }
+.picture2{
+    display: none;
+}
 
 @media screen and (max-width: 940px) {
+    .footerSpecial{
+        text-align: center;
+    }
+    .picture2{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: block;
+    }
+    .picture{
+        display: none;
+    }
     .page {
         width: auto;
         max-width: 420px;
@@ -508,7 +551,7 @@ a:hover {
     .page__content>.links {
         -ms-flex-order: 0;
         order: 0;
-        margin-bottom: 30px;
+        margin-bottom: 100px;
         white-space: nowrap;
         margin-left: auto;
         margin-right: auto;
