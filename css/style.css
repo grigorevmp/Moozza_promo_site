@@ -6,6 +6,78 @@ html {
     font: 17px/24px -apple-system, BlinkMacSystemFont, Roboto, Open Sans, Helvetica Neue, sans-serif
 }
 
+body { font-family: sans-serif; }
+
+.scene {
+    border: 0px solid #CCC;
+    perspective: 600px;
+    left:430px;
+    position: absolute;
+    width: 299px;
+    height: 600px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+
+.phone {
+    vertical-align: top;
+    max-width: 100%;
+    margin: 0 0 40px;
+    height: 100%;
+}
+
+
+.phone {
+    position: absolute;
+    width: 100%;
+    line-height: 260px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    vertical-align: top;
+    max-width: 100%;
+    margin: 0 0 40px;
+    height: 100%;
+}
+
+.phone--android2--front{
+    border-radius: 20px;
+    background: url('../img/screen1.png') no-repeat center;
+}
+
+.phone--android2--back {
+    border-radius: 20px;
+    background: url('../img/screen0.png') no-repeat center;
+    transform: rotateY(180deg);
+}
+
+.phone--android2 {
+    background-size: cover;
+}
+
+.phone--android {
+    top: -40px;
+    right: 279px;
+    border-radius: 20px;
+    background: url('../img/screen2.png') no-repeat center;
+    background-size: cover;
+    padding-top: 20px;
+}
+
 
 /* The Modal (background) */
 .modal {
@@ -77,7 +149,7 @@ a:hover {
 
 .page {
     height: 100%;
-    width: 940px;
+    width: 1140px;
     margin: auto
 }
 
@@ -230,7 +302,7 @@ a:hover {
 
 .picture {
     position: absolute;
-    top: 0;
+    top: 40px;
     right: 0;
     width: 665px;
     height: 100%;
@@ -253,46 +325,6 @@ a:hover {
         margin-left: auto;
         margin-right: auto;
     }
-}
-
-.phone {
-    vertical-align: top;
-    max-width: 100%;
-    margin: 0 0 40px;
-    height: 100%;
-}
-
-
-.phone--android3 {
-    top: 37px;
-    right: -233px;
-    height: 100%;
-    background: url('../img/screen0.png') no-repeat center;
-    background-size: contain;
-    -o-transform: translateY(calc(var(--koef) * 0.5 * 30px));
-    transform: translateY(calc(var(--koef) * 0.5 * 30px));
-    padding-top: 20px;
-}
-
-.phone--android2 {
-    top: 22px;
-    right: 8px;
-    height: 100%;
-    background: url('../img/screen1.png') no-repeat center;
-    background-size: contain;
-    -o-transform: translateY(calc(var(--koef) * 0.5 * 30px));
-    transform: translateY(calc(var(--koef) * 0.5 * 30px));
-    padding-top: 20px;
-}
-
-.phone--android {
-    top: -40px;
-    right: 279px;
-    background: url('../img/screen2.png') no-repeat center;
-    background-size: contain;
-    -o-transform: translateY(calc(var(--koef) * 30px));
-    transform: translateY(calc(var(--koef) * 30px));
-    padding-top: 20px;
 }
 
 @media screen and (max-width: 940px) {
@@ -332,15 +364,12 @@ a:hover {
     }
     .phone--android3{
         width: 269px;
-        height: 505px
     }
     .phone--android2 {
         width: 299px;
-        height: 561px
     }
     .phone--android {
         width: 330px;
-        height: 677px
     }
 }
 
@@ -385,7 +414,7 @@ a:hover {
     -ms-flex: 0 0 16px;
     flex: 0 0 16px;
     padding: 230px 0;
-    width: 940px;
+    width: 1140px;
     margin: auto
 }
 

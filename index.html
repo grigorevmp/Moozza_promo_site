@@ -69,9 +69,13 @@
 
                     <section class="page__content">
                         <div class="picture">
-                            <div class="phone phone--android3"></div>
-                            <div class="phone phone--android2"></div>
                             <div class="phone phone--android"></div>
+                            <div class="scene scene--card">
+                                <div class="card">
+                                    <div class="phone phone--android2 phone--android2--back"></div>
+                                    <div class="phone phone--android2 phone--android2--front"></div>
+                                </div>
+                            </div>
 
                         </div>
 
@@ -152,6 +156,15 @@
             theme.href = "css/style.css";
         }
     });
+
+    var card = document.querySelector('.card');
+    card.addEventListener( 'click', function() {
+        card.classList.toggle('is-flipped');
+    });
+    function flip() {
+        card.classList.toggle('is-flipped');
+    }
+    setTimeout(flip, 3000);
 </script>
 </body>
 </html>
