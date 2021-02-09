@@ -32,7 +32,6 @@
 
     <!-- Scripts -->
     <script src="./js/main.js" charset="utf-8"></script>
-
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
         function setCookie(name,value,days) {
@@ -233,7 +232,9 @@
     function generateBarCode(str)
     {
         const url = 'https://api.qrserver.com/v1/create-qr-code/?data=' + str + '&amp;size=50x50';
-        //$('#barcode').attr('src', url);
+        var logo = document.getElementById('barcode');
+        logo.src = url;
+
         document.getElementById("barcode").style.display = "block";
         // Get the modal
         const modal = document.getElementById("myModal");
