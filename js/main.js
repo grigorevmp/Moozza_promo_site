@@ -1,24 +1,3 @@
-function generateBarCode(str)
-{
-    const url = 'https://api.qrserver.com/v1/create-qr-code/?data=' + str + '&amp;size=50x50';
-    $('#barcode').attr('src', url);
-    document.getElementById("barcode").style.display = "block";
-    // Get the modal
-    const modal = document.getElementById("myModal");
-    modal.style.display = "block";
-
-    const span = document.getElementsByClassName("close")[0];
-
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    window.onclick = function(event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    }
-}
 
 var initVkMeLanding = function() {
     init();

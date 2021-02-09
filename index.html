@@ -233,7 +233,7 @@
     function generateBarCode(str)
     {
         const url = 'https://api.qrserver.com/v1/create-qr-code/?data=' + str + '&amp;size=50x50';
-        $('#barcode').attr('src', url);
+        //$('#barcode').attr('src', url);
         document.getElementById("barcode").style.display = "block";
         // Get the modal
         const modal = document.getElementById("myModal");
