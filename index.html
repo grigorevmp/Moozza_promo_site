@@ -29,7 +29,21 @@
 
     <!-- Styles -->
     <link href="css/style.css" rel="stylesheet" id="theme-link">
+    <script>
 
+        const x = getCookie('currtheme');
+        if (x && x === 'dark') {
+            const theme = document.querySelector("#theme-link");
+            theme.href = "css/style-dark.css";
+            document.getElementsByClassName("notif")[0].style.display = "none";
+            document.getElementsByClassName("notif2")[0].style.display = "none";
+        }
+        if (x && x === 'white') {
+            document.getElementsByClassName("notif")[0].style.display = "none";
+            document.getElementsByClassName("notif2")[0].style.display = "none";
+        }
+
+    </script>
     <!-- Scripts -->
     <script src="./js/main.js" charset="utf-8"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -165,18 +179,6 @@
         </div>
     </div>
 <script>
-
-    const x = getCookie('currtheme');
-    if (x && x === 'dark') {
-        const theme = document.querySelector("#theme-link");
-        theme.href = "css/style-dark.css";
-        document.getElementsByClassName("notif")[0].style.display = "none";
-        document.getElementsByClassName("notif2")[0].style.display = "none";
-    }
-    if (x && x === 'white') {
-        document.getElementsByClassName("notif")[0].style.display = "none";
-        document.getElementsByClassName("notif2")[0].style.display = "none";
-    }
 
     // Select the button
     const btn = document.querySelector(".image_logo");

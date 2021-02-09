@@ -194,9 +194,9 @@ a:hover {
 
 
 .mini_screen{
+    border-radius: 15px;
     width: 250px;
-    padding-left: 20px;
-    padding-right: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.05), 0 10px 10px rgba(0,0,0,0.05);
 }
 .mini_screen:hover {
     transform: scale(1);
