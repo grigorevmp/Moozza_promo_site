@@ -34,6 +34,30 @@
     <script src="./js/main.js" charset="utf-8"></script>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        function setCookie(name,value,days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days*24*60*60*1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+        }
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+                var c = ca[i];
+                while (c.charAt(0)===' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
+        }
+        function eraseCookie(name) {
+            document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        }
+    </script>
 
 
 </head>
@@ -59,8 +83,10 @@
             <div class="page page--ru">
                 <main class="page__main">
                     <header class="page__header">
-                        <img class="image_logo_media" height="120px" width="120px"
+                        <img class="swing image_logo_media" height="120px" width="120px"
                              src="./img/ic2.png" alt="Moozza logo">
+                        <img class="notif2" height="15px" width="15px"
+                             src="./img/change.png" alt="Change theme">
 
                         <div class="tagline">
                             <p class="title">Moozza - Музыка для ВК</p>
@@ -80,6 +106,8 @@
                         </div>
                         <img class="swing image_logo" height="120px" width="120px"
                              src="./img/ic2.png" alt="Moozza logo">
+                        <img class="notif" height="15px" width="15px"
+                             src="./img/change.png" alt="Change theme">
 
                         <article class="teaser teaser--contacts">
                             <p class="title2">Moozza - Музыка для ВК</p>
@@ -97,7 +125,7 @@
                             <img width="24px" height="24px" src="./img/package.svg" alt="App size"/>
                             <span class="app_info_text"> Размер приложения: 5.2 Мб</span>
                         </div>
-
+                        <div class ="screenshots"> Скриншоты: </div>
                         <div class="picture2">
                             <img class="mini_screen" src="img/screen2.png" alt="screenshot"/>
                             <img class="mini_screen" src="img/screen1.png" alt="screenshot"/>
@@ -125,13 +153,25 @@
                 </main>
                 <div class="footerSpecial">
                     <!--img width="24px" height="24px" src="./img/telegram.svg" alt="Telegram link"/-->
-                    <a href="https://t.me/euphoria_devs" class="footerSpecial"> EuphoriaDev • 2021</a>
+                    <a href="https://t.me/euphoria_devs" class="footerSpecial"> Euphoria Developers • 2021</a>
             </div>
             </div>
 
         </div>
     </div>
 <script>
+
+    const x = getCookie('currtheme');
+    if (x && x === 'dark') {
+        const theme = document.querySelector("#theme-link");
+        theme.href = "css/style-dark.css";
+        document.getElementsByClassName("notif")[0].style.display = "none";
+        document.getElementsByClassName("notif2")[0].style.display = "none";
+    }
+    if (x && x === 'white') {
+        document.getElementsByClassName("notif")[0].style.display = "none";
+        document.getElementsByClassName("notif2")[0].style.display = "none";
+    }
 
     // Select the button
     const btn = document.querySelector(".image_logo");
@@ -144,10 +184,16 @@
         // If the current URL contains "ligh-theme.css"
         if (theme.getAttribute("href") === "css/style.css") {
             // ... then switch it to "dark-theme.css"
+            setCookie('currtheme','dark',365);
             theme.href = "css/style-dark.css";
+            document.getElementsByClassName("notif")[0].style.display = "none";
+            document.getElementsByClassName("notif2")[0].style.display = "none";
             // Otherwise...
         } else {
+            setCookie('currtheme','white',365);
             theme.href = "css/style.css";
+            document.getElementsByClassName("notif")[0].style.display = "none";
+            document.getElementsByClassName("notif2")[0].style.display = "none";
         }
     });
     // Listen for a click on the button
@@ -156,9 +202,15 @@
         if (theme.getAttribute("href") === "css/style.css") {
             // ... then switch it to "dark-theme.css"
             theme.href = "css/style-dark.css";
+            setCookie('currtheme','dark',365);
+            document.getElementsByClassName("notif")[0].style.display = "none";
+            document.getElementsByClassName("notif2")[0].style.display = "none";
             // Otherwise...
         } else {
             theme.href = "css/style.css";
+            setCookie('currtheme','white',365);
+            document.getElementsByClassName("notif")[0].style.display = "none";
+            document.getElementsByClassName("notif2")[0].style.display = "none";
         }
     });
 

@@ -18,6 +18,16 @@ body { font-family: sans-serif; }
     100% { transform: rotate(-3deg); }
 }
 
+.notif{
+    position: absolute;
+    margin: 5px;
+}
+
+.notif2{
+    position: absolute;
+    margin: 5px;
+    display: none;
+}
 .scene {
     border: 0px solid #CCC;
     perspective: 600px;
@@ -173,8 +183,15 @@ a:hover {
 
 }
 
+.screenshots{
+    font-family: monospace;
+    vertical-align: super;
+    padding: 10px;
+    text-align: center;
+}
+
 .mini_screen{
-    width: 100px;
+    width: 150px;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -207,12 +224,24 @@ a:hover {
 }
 
 @media screen and (max-width: 940px) {
+    .notif2{
+        position: absolute;
+        right: 150px;
+        top: 130px;
+        margin: 5px;
+        display: block;
+    }
+    .notif{
+        position: absolute;
+        margin: 5px;
+        display: none;
+    }
     .footerSpecial{
         text-align: center;
     }
     .picture2{
         padding-top: 20px;
-        padding-bottom: 20px;
+        padding-bottom: 50px;
         display: block;
     }
     .picture{

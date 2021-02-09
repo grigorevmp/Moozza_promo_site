@@ -462,11 +462,34 @@ a:hover {
     transform-origin: center -20px;
 }
 
+.notif{
+    position: absolute;
+    margin: 5px;
+}
+
+.notif2{
+    position: absolute;
+    margin: 5px;
+    display: none;
+}
+
 @keyframes swing {
     0% { transform: rotate(3deg); }
     100% { transform: rotate(-3deg); }
 }
 @media screen and (max-width: 940px) {
+    .notif2{
+        position: absolute;
+        right: 150px;
+        top: 130px;
+        margin: 5px;
+        display: block;
+    }
+    .notif{
+        position: absolute;
+        margin: 5px;
+        display: none;
+    }
     .footer {
         width: auto;
         text-align: center;
@@ -548,7 +571,7 @@ a:hover {
     }
     .picture2{
         padding-top: 20px;
-        padding-bottom: 20px;
+        padding-bottom: 50px;
         display: block;
     }
     .page__content>.links {
@@ -569,7 +592,7 @@ a:hover {
 }
 
 .mini_screen{
-    width: 100px;
+    width: 150px;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -578,6 +601,12 @@ a:hover {
     transform: scale(3);
 }
 
+.screenshots{
+    font-family: monospace;
+    vertical-align: super;
+    padding: 10px;
+    text-align: center;
+}
 .page--android .link--ios,
 .page--ios .link--android {
     display: none
