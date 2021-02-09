@@ -565,7 +565,18 @@ a:hover {
 .picture2{
     display: none;
 }
+
+.screenshots{
+     display: none;
+ }
 @media screen and (max-width: 940px) {
+
+    .screenshots{
+        font-family: monospace;
+        vertical-align: super;
+        padding: 10px;
+        text-align: center;
+    }
     .footerSpecial{
         text-align: center;
     }
@@ -602,12 +613,7 @@ a:hover {
     transform: scale(1);
 }
 
-.screenshots{
-    font-family: monospace;
-    vertical-align: super;
-    padding: 10px;
-    text-align: center;
-}
+
 .page--android .link--ios,
 .page--ios .link--android {
     display: none

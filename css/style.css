@@ -184,11 +184,9 @@ a:hover {
 }
 
 .screenshots{
-    font-family: monospace;
-    vertical-align: super;
-    padding: 10px;
-    text-align: center;
+    display: none;
 }
+
 
 .mini_screen{
     width: 250px;
@@ -224,6 +222,12 @@ a:hover {
 }
 
 @media screen and (max-width: 940px) {
+    .screenshots{
+        font-family: monospace;
+        vertical-align: super;
+        padding: 10px;
+        text-align: center;
+    }
     .notif2{
         position: absolute;
         right: 150px;
