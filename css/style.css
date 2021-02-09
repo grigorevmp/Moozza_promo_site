@@ -6,7 +6,10 @@ html {
     font: 17px/24px -apple-system, BlinkMacSystemFont, Roboto, Open Sans, Helvetica Neue, sans-serif
 }
 
-body { font-family: sans-serif; }
+body {
+    font-family: sans-serif;
+    background: url('../img/pattern.png') 0 0 repeat;
+}
 
 .swing {
     animation: swing ease-in-out 1s 5 alternate;
@@ -87,6 +90,7 @@ body { font-family: sans-serif; }
 
 .phone--android2 {
     background-size: cover;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.05), 0 10px 10px rgba(0,0,0,0.05);
 }
 
 .phone--android {
@@ -96,6 +100,7 @@ body { font-family: sans-serif; }
     background: url('../img/screen2.png') no-repeat center;
     background-size: cover;
     padding-top: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.05), 0 10px 10px rgba(0,0,0,0.05);
 }
 
 
