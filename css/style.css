@@ -1,3 +1,4 @@
+
 body,
 html {
     margin: 0;
@@ -5,6 +6,8 @@ html {
     height: 100%;
     font: 17px/24px -apple-system, BlinkMacSystemFont, Roboto, Open Sans, Helvetica Neue, sans-serif
 }
+
+
 
 body {
     font-family: sans-serif;
@@ -178,7 +181,14 @@ a:hover {
     margin: auto
 }
 
+.col-md-6{
+    display:none
+}
+
 @media screen and (max-width: 1140px) and (min-width: 940px) {
+    .col-md-6{
+        display:block;
+    }
     .footer {
         width: 940px;
     }
@@ -251,8 +261,11 @@ a:hover {
     .picture2{
         padding-top: 20px;
         padding-bottom: 50px;
-        display: flex;
-        justify-content: center;
+        display: block;
+    }
+    .picture2all{
+        margin-left: auto;
+        margin-right: auto;
     }
     .picture{
         display: none;
@@ -475,6 +488,11 @@ a:hover {
     width: 127px;
     height: 33px;
 }
+.download:hover,
+.googlePlay:hover{
+    opacity: 0.6;
+}
+
 
 .teaser--features {
     font-family: monospace;

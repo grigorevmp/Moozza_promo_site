@@ -27,23 +27,8 @@
     <meta name="keywords" content="музыка, оффлайн, загрузка, без ограничений, вк, кофе. coffee, vk, vkx,
         moozza, offline, скачать, бесплатно, free, vkontakte, контакте, зайцев, нет">
 
-    <!-- Styles -->
     <link href="css/style.css" rel="stylesheet" id="theme-link">
-    <script>
 
-        const x = getCookie('currtheme');
-        if (x && x === 'dark') {
-            const theme = document.querySelector("#theme-link");
-            theme.href = "css/style-dark.css";
-            document.getElementsByClassName("notif")[0].style.display = "none";
-            document.getElementsByClassName("notif2")[0].style.display = "none";
-        }
-        if (x && x === 'white') {
-            document.getElementsByClassName("notif")[0].style.display = "none";
-            document.getElementsByClassName("notif2")[0].style.display = "none";
-        }
-
-    </script>
     <!-- Scripts -->
     <script src="./js/main.js" charset="utf-8"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -139,6 +124,7 @@
                             <span class="app_info_text"> Размер приложения: 5.2 Мб</span>
                         </div>
                         <div class ="screenshots"> Скриншоты: </div>
+                        <div class="picture2all">
                         <div class="picture2">
                             <img class="mini_screen" src="img/screen2.png" alt="screenshot"/>
 
@@ -151,11 +137,35 @@
                             <img class="mini_screen" src="img/screen0.png" alt="screenshot"/>
 
                         </div>
+
+            </div>
+
+                        <script>
+                            var slideIndex = 1;
+                            showDivs(slideIndex);
+
+                            function plusDivs(n) {
+                                showDivs(slideIndex += n);
+                            }
+
+                            function showDivs(n) {
+                                var i;
+                                var x = document.getElementsByClassName("mySlides");
+                                if (n > x.length) {slideIndex = 1}
+                                if (n < 1) {slideIndex = x.length}
+                                for (i = 0; i < x.length; i++) {
+                                    x[i].style.display = "none";
+                                }
+                                x[slideIndex-1].style.display = "block";
+                            }
+                        </script>
+
                         <footer class="links">
                             <div class="link link--ios">
                                 <a href="http://moozza.su/dl/1.4.5.apk" class="link-store">
                                     <img class="download" src="./img/download.png" width="127" height="33" alt="Загрузите">
                                 </a>
+
                                 <a data-target="ios-link-qr" class="link-qr"
                                    onclick="generateBarCode('http://moozza.su/dl/1.4.5.apk')"></a>
                             </div>
@@ -231,6 +241,17 @@
     setTimeout(flip, 3000);
 </script>
 <script>
+    const x = getCookie('currtheme');
+    if (x && x === 'dark') {
+        const theme = document.querySelector("#theme-link");
+        theme.href = "css/style-dark.css";
+        document.getElementsByClassName("notif")[0].style.display = "none";
+        document.getElementsByClassName("notif2")[0].style.display = "none";
+    }
+    if (x && x === 'white') {
+        document.getElementsByClassName("notif")[0].style.display = "none";
+        document.getElementsByClassName("notif2")[0].style.display = "none";
+    }
     function generateBarCode(str)
     {
         const url = 'https://api.qrserver.com/v1/create-qr-code/?data=' + str + '&amp;size=50x50';

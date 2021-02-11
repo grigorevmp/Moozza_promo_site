@@ -106,8 +106,13 @@ a:hover {
     padding: 0 665px 0 0;
     min-height: 638px
 }
-
+.col-md-6{
+    display:none
+}
 @media screen and (max-width: 940px) {
+    .col-md-6{
+        display:block;
+    }
     .picture{
         display: none;
     }
@@ -176,7 +181,7 @@ a:hover {
     font-family: monospace;
     vertical-align: super;
     /*padding-left: 10px;*/
-    color: black;
+    color: white;
     filter: invert(1);
 }
 
@@ -590,8 +595,11 @@ a:hover {
     .picture2{
         padding-top: 20px;
         padding-bottom: 50px;
-        display: flex;
-        justify-content: center;
+        display: block;
+    }
+    .picture2all{
+        margin-left: auto;
+        margin-right: auto;
     }
     .page__content>.links {
         -ms-flex-order: 0;
@@ -638,7 +646,10 @@ a:hover {
     position: relative;
     text-decoration: none
 }
-
+.download:hover,
+.googlePlay:hover{
+    opacity: 0.6;
+}
 .link-qr {
     width: 33px;
     height: 33px;
