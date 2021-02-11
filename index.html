@@ -26,7 +26,7 @@
         Имеется возможность скачивать, сохранять в кэш, искать слова трека, даже если у тегах они не прописаны. И многое другое, а что бы вам было комфортно пользоваться ночью - мы добавили темную тему">
     <meta name="keywords" content="музыка, оффлайн, загрузка, без ограничений, вк, кофе. coffee, vk, vkx,
         moozza, offline, скачать, бесплатно, free, vkontakte, контакте, зайцев, нет">
-
+    <link rel="stylesheet" href="./css/flickity.css" media="screen">
     <link href="css/style.css" rel="stylesheet" id="theme-link">
 
     <!-- Scripts -->
@@ -60,6 +60,7 @@
 
 </head>
 <body>
+<script src="./js/flickity.pkgd.min.js"></script>
 <!-- The Modal -->
 <div id="myModal" class="modal">
     <!-- Modal content -->
@@ -124,8 +125,9 @@
                             <span class="app_info_text"> Размер приложения: 5.2 Мб</span>
                         </div>
                         <div class ="screenshots"> Скриншоты: </div>
+
                         <div class="picture2all">
-                        <div class="picture2">
+                        <!--div class="picture2">
                             <img class="mini_screen" src="img/screen2.png" alt="screenshot"/>
 
                         </div>
@@ -136,29 +138,28 @@
                         <div class="picture2">
                             <img class="mini_screen" src="img/screen0.png" alt="screenshot"/>
 
-                        </div>
+                        </div-->
+                            <! Flickity HTML init >
 
             </div>
+                        <div class="carousel js-flickity">
+                        <!-- images from unsplash.com -->
+                        <div class="carousel-cell"> <div class="picture2">
+                            <img class="mini_screen" src="./img/screen2.png" alt="screenshot"/>
+                        </div>
+                        </div>
+                        <div class="carousel-cell"> <div class="picture2">
+                            <img class="mini_screen" src="./img/screen1.png" alt="screenshot"/>
+                        </div>
+                        </div>
+                        <div class="carousel-cell"> <div class="picture2">
+                            <img class="mini_screen" src="./img/screen0.png" alt="screenshot"/>
+                        </div>
+                        </div>
+                    </div>
 
-                        <script>
-                            var slideIndex = 1;
-                            showDivs(slideIndex);
 
-                            function plusDivs(n) {
-                                showDivs(slideIndex += n);
-                            }
 
-                            function showDivs(n) {
-                                var i;
-                                var x = document.getElementsByClassName("mySlides");
-                                if (n > x.length) {slideIndex = 1}
-                                if (n < 1) {slideIndex = x.length}
-                                for (i = 0; i < x.length; i++) {
-                                    x[i].style.display = "none";
-                                }
-                                x[slideIndex-1].style.display = "block";
-                            }
-                        </script>
 
                         <footer class="links">
                             <div class="link link--ios">
