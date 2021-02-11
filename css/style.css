@@ -286,8 +286,8 @@ a:hover {
 
 .mini_screen{
     border-radius: 15px;
-    width: 250px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.05), 0 10px 10px rgba(0,0,0,0.05);
+    width: 220px;
+    box-shadow: 0 7px 14px rgba(0,0,0,0.05), 0 5px 5px rgba(0,0,0,0.05);
 }
 .mini_screen:hover {
     transform: scale(1);
