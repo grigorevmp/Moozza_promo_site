@@ -8,13 +8,6 @@ html {
 }
 
 
-@font-face {
-    font-family: "icomoon";
-    src: url("https://tympanus.net/Development/CreativeButtons/fonts/icomoon/icomoon.woff")
-    format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
 
 /* General button style (reset) */
 .btn {
@@ -25,9 +18,8 @@ html {
     cursor: pointer;
     padding: 25px 80px;
     display: inline-block;
-    font-family: inherit, monospace;
+    font-family: monospace;
     letter-spacing: 1px;
-    font-weight: 200;
     outline: none;
     position: relative;
     transition: all 0.3s;
