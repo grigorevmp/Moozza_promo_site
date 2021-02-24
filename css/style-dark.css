@@ -60,6 +60,7 @@ html {
 
 /* Button 7 */
 .btn-7 {
+    width: 195px;
     background: black;
     color: #fff;
     border-radius: 7px;
@@ -115,6 +116,7 @@ html {
     position: absolute;
     left: 0;
     width: 30%;
+    top: 11.5px;
     font-size: 120%;
     line-height: 0.8;
     color: #fff;
@@ -901,6 +903,11 @@ a:hover {
         display: block;
         text-align: center;
     }
+
+    .link--androidd{
+        display: block;
+        text-align: center;
+    }
 }
 
 .button {
@@ -1061,4 +1068,11 @@ a:hover {
     font-family: monospace;
     vertical-align: super;
     padding-left: 10px;
+}
+
+@media screen and (max-width: 430px) {
+    .link--android{
+        display: block;
+        text-align: center;
+    }
 }
