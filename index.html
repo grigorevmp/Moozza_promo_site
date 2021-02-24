@@ -28,7 +28,7 @@
         moozza, offline, скачать, бесплатно, free, vkontakte, контакте, зайцев, нет">
     <link rel="stylesheet" href="./css/flickity.css" media="screen">
     <link href="css/style.css" rel="stylesheet" id="theme-link">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
     <!-- Scripts -->
     <script src="./js/main.js" charset="utf-8"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -161,22 +161,32 @@
 
 
 
+
                         <footer class="links">
                             <div class="link link--ios">
-                                <a href="http://moozza.su/dl/1.4.5.apk" class="link-store">
+                                <!--a href="http://moozza.su/dl/1.4.5.apk" class="link-store">
                                     <img class="download" src="./img/download.png" width="127" height="33" alt="Загрузите">
-                                </a>
+                                </a-->
+
+                                <button onclick="location.href='http://moozza.su/dl/1.4.5.apk'" class="btn btn-7 btn-7b zmdi-download">Download apk</button>
 
                                 <a data-target="ios-link-qr" class="link-qr"
                                    onclick="generateBarCode('http://moozza.su/dl/1.4.5.apk')"></a>
                             </div>
 
                             <div class="link link--android">
-                                <a href="https://play.google.com/store/apps/details?id=ru.euphoria.moozza" target="_blank" class="link-store">
+                                <button onclick="location.href='https://play.google.com/store/apps/details?id=ru.euphoria.moozza'"  class="btn btn-7 btn-7b zmdi-google-play">Google play</button>
+                                <!--a href="https://play.google.com/store/apps/details?id=ru.euphoria.moozza" target="_blank" class="link-store">
                                     <img class="googlePlay" src="./img/playstore.png" width="127" height="33"  alt="Google Play">
-                                </a>
+                                </a-->
                                 <a data-target="android-link-qr" class="link-qr"
                                    onclick="generateBarCode('https://play.google.com/store/apps/details?id=ru.euphoria.moozza')"></a>
+                            </div>
+
+                            <div class="link link--ag">
+                                <button onclick="location.href='http://moozza.su/dl/1.4.5.apk'" class="btn btn-7 btn-7b zmdi-local-mall">App gallery</button>
+                                <a data-target="ios-link-qr" class="link-qr"
+                                   onclick="generateBarCode('http://moozza.su/dl/1.4.5.apk')"></a>
                             </div>
                         </footer>
                     </section>

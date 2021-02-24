@@ -7,6 +7,134 @@ html {
     font: 17px/24px -apple-system, BlinkMacSystemFont, Roboto, Open Sans, Helvetica Neue, sans-serif
 }
 
+
+@font-face {
+    font-family: "icomoon";
+    src: url("https://tympanus.net/Development/CreativeButtons/fonts/icomoon/icomoon.woff")
+    format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General button style (reset) */
+.btn {
+    border: none;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 25px 80px;
+    display: inline-block;
+    font-family: inherit, monospace;
+    letter-spacing: 1px;
+    font-weight: 200;
+    outline: none;
+    position: relative;
+    transition: all 0.3s;
+}
+
+
+
+.btn:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+/* Pseudo elements for icons */
+.btn:before,
+.zmdi-lock-outline:after,
+.zmdi-star-outline:after,
+.zmdi-plus-circle:after {
+    font-family: "Material-Design-Iconic-Font", monospace;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Button 7 */
+.btn-7 {
+    background: black;
+    color: #fff;
+    border-radius: 7px;
+    padding: 10px 20px 10px 50px;
+}
+
+.btn-7:hover{
+
+    box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.1);
+}
+
+@keyframes fadeOutText {
+    0% {
+        color: transparent;
+    }
+    80% {
+        color: transparent;
+    }
+    100% {
+        color: #fff;
+    }
+}
+@keyframes moveToRight {
+    80% {
+        transform: translateX(250%);
+    }
+    81% {
+        opacity: 1;
+        transform: translateX(250%);
+    }
+    82% {
+        opacity: 0;
+        transform: translateX(250%);
+    }
+    83% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    84% {
+        opacity: 1;
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/* Button 7b */
+.btn-7b {
+    overflow: hidden;
+}
+.btn-7b:before {
+    position: absolute;
+    left: 0;
+    width: 30%;
+    font-size: 120%;
+    line-height: 0.8;
+    color: #fff;
+}
+.btn-7b:focus::before {
+    transition: 3s ease-out;
+    animation: scaleUp 0.5s;
+}
+@keyframes scaleUp {
+    80% {
+        opacity: 0;
+        transform: scale(2);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+
 .carousel {
     background: black;
 }
@@ -266,7 +394,7 @@ a:hover {
 .footerSpecial{
     font-family: monospace;
     vertical-align: super;
-    /*padding-left: 10px;*/
+    padding-top: 20px;
     color: white;
     filter: invert(1);
 }
@@ -418,12 +546,12 @@ a:hover {
 }
 
 .phone--android2--front{
-    background: url('../img/screen1.png') no-repeat center;
+    background: url('../img/screenshots/screen1.png') no-repeat center;
     border-radius: 20px;
 }
 
 .phone--android2--back {
-    background: url('../img/screen0.png') no-repeat center;
+    background: url('../img/screenshots/screen0.png') no-repeat center;
     border-radius: 20px;
     transform: rotateY(180deg);
 }
@@ -437,7 +565,7 @@ a:hover {
     top: -40px;
     right: 279px;
     border-radius: 20px;
-    background: url('../img/screen2.png') no-repeat center;
+    background: url('../img/screenshots/screen2.png') no-repeat center;
     background-size: cover;
     padding-top: 20px;
     box-shadow: 0 14px 28px rgba(255,255,255,0.05), 0 10px 10px rgba(255,255,255,0.05);
@@ -677,6 +805,7 @@ a:hover {
 }
 @media screen and (max-width: 940px) {
 
+
     .screenshots{
         font-family: monospace;
         vertical-align: super;
@@ -714,8 +843,8 @@ a:hover {
 
 .mini_screen{
     border-radius: 15px;
-    width: 220px;
-    box-shadow: 0 7px 14px rgba(0,0,0,0.05), 0 5px 5px rgba(0,0,0,0.05);
+    width: 250px;
+    box-shadow: 0 14px 28px rgba(230,230,230,0.05), 0 10px 10px rgba(230,230,230,0.05);
     filter: invert(1);
 }
 
@@ -745,8 +874,8 @@ a:hover {
     opacity: 0.6;
 }
 .link-qr {
-    width: 33px;
-    height: 33px;
+    width: 37px;
+    height: 37px;
     border-radius: 8px;
     border: 2px solid #ebedf0;
     background: url('data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20width%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M17.5%2017h1.5c.276%200%20.5.224.5.5v1.5c0%20.276-.224.5-.5.5h-1.5c-.276%200-.5-.224-.5-.5v-1.5c0-.276.224-.5.5-.5zm-5.5%200h1.5c.276%200%20.5.224.5.5v1.5c0%20.276-.224.5-.5.5h-1.5c-.276%200-.5-.224-.5-.5v-1.5c0-.276.224-.5.5-.5zm2.75-2.75h1.5c.276%200%20.5.224.5.5v1.5c0%20.276-.224.5-.5.5h-1.5c-.276%200-.5-.224-.5-.5v-1.5c0-.276.224-.5.5-.5zm2.75-2.75h1.5c.276%200%20.5.224.5.5v1.5c0%20.276-.224.5-.5.5h-1.5c-.276%200-.5-.224-.5-.5v-1.5c0-.276.224-.5.5-.5zm-5.5%200h1.5c.276%200%20.5.224.5.5v1.5c0%20.276-.224.5-.5.5h-1.5c-.276%200-.5-.224-.5-.5v-1.5c0-.276.224-.5.5-.5zm-9.5-.5h4c1.381%200%202.5%201.119%202.5%202.5v4c0%201.381-1.119%202.5-2.5%202.5h-4c-1.381%200-2.5-1.119-2.5-2.5v-4c0-1.381%201.119-2.5%202.5-2.5zm.25%201.75c-.552%200-1%20.448-1%201v3.5c0%20.552.448%201%201%201h3.5c.552%200%201-.448%201-1v-3.5c0-.552-.448-1-1-1zm1%201.5h1.5c.276%200%20.5.224.5.5v1.5c0%20.276-.224.5-.5.5h-1.5c-.276%200-.5-.224-.5-.5v-1.5c0-.276.224-.5.5-.5zm9.75-14.25h4c1.381%200%202.5%201.119%202.5%202.5v4c0%201.381-1.119%202.5-2.5%202.5h-4c-1.381%200-2.5-1.119-2.5-2.5v-4c0-1.381%201.119-2.5%202.5-2.5zm.25%201.75c-.552%200-1%20.448-1%201v3.5c0%20.552.448%201%201%201h3.5c.552%200%201-.448%201-1v-3.5c0-.552-.448-1-1-1zm1%201.5h1.5c.276%200%20.5.224.5.5v1.5c0%20.276-.224.5-.5.5h-1.5c-.276%200-.5-.224-.5-.5v-1.5c0-.276.224-.5.5-.5zm-12.25-3.25h4c1.381%200%202.5%201.119%202.5%202.5v4c0%201.381-1.119%202.5-2.5%202.5h-4c-1.381%200-2.5-1.119-2.5-2.5v-4c0-1.381%201.119-2.5%202.5-2.5zm.25%201.75c-.552%200-1%20.448-1%201v3.5c0%20.552.448%201%201%201h3.5c.552%200%201-.448%201-1v-3.5c0-.552-.448-1-1-1zm1%201.5h1.5c.276%200%20.5.224.5.5v1.5c0%20.276-.224.5-.5.5h-1.5c-.276%200-.5-.224-.5-.5v-1.5c0-.276.224-.5.5-.5z%22%20%2F%3E%3C%2Fsvg%3E') 50% no-repeat;
@@ -767,6 +896,10 @@ a:hover {
     }
     .link-qr {
         display: none
+    }
+    .link--ios{
+        display: block;
+        text-align: center;
     }
 }
 
